@@ -16,6 +16,7 @@ window.Modernizr = (function (a, b, c) {
     return typeof a === b;
   }
   function g(a, b) {
+    m;
     return !!~("" + a).indexOf(b);
   }
   function h(a, b) {
@@ -70,7 +71,7 @@ window.Modernizr = (function (a, b, c) {
                     0 !== u.offsetHeight),
                   q.removeChild(u))
                 : /^(search|tel)$/.test(e) ||
-                  (d = /^(url|tmdwnchlrh3@gmail.com)$/.test(e)
+                  (d = /^(url|email)$/.test(e)
                     ? u.checkValidity && u.checkValidity() === !1
                     : u.value != v)),
             (D[a[g]] = !!d);
