@@ -52,7 +52,9 @@
         
         <!-- General Initialization -->
         <script src="js/general.js" type="text/javascript"> </script>
-        
+        <!-- email-->
+        <script data-cfasync="false" type="text/javascript"
+src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
     </head>
     
     <body id="home">
@@ -106,14 +108,14 @@
                        <span><h3>누구인가?</h3></span>
                        <p>[ 천국을 바라보며 지옥을 느끼는 것 ]<br/>
                         후회. 저에게 있어 가장 좋아하면서도 가장 싫어하는 단어입니다. 항상 ‘노력’과 연관되고 항상 저에게 있어<br/> 기준이 되는 단어입니다. 기준이 있으면 언제나 답은 명쾌합니다. 
-                        <br/>후회하지 않기 위해 누구에게도 지지 않는 열정과 노력으로 모든 일에 최선을 다할 것이고 도전하는 <bold>김승주</bold>입니다.</p>
+                        <br/>후회하지 않기 위해 누구에게도 지지 않는 열정과 노력으로 모든 일에 최선을 다할 것이고 도전하는 <strong>김승주</strong>입니다.</p>
                    </div>
                </div>
                
                <div class="large-4 hide-for-medium-only hide-for-small-only column start"> 
                    <div class="imageholder">
                        <img src="images/kimseungjoo.jpg" style="width: 75%; height: 350px;" alt="Green Path Way" title="Green Path Way">
-                       <div class="text"><div><span>Quality Craftsmanship</span></div></div>
+                       <div class="text"><div><span>Kimseungjoo</span></div></div>
                    </div>
                </div>
                
@@ -659,7 +661,7 @@
                    <div class="title">
                        <h1>CONTACT</h1>
                        <span>...</span>
-                       <p>we'd really love to hear from you so why not drop us a line<br/>and we'll get back to you as soon as we can</p>
+                       <p>GIT / EMAIL / TEL /</p>
                    </div>
                </div>
                
@@ -676,22 +678,27 @@
                           </div> 
                        </div>
                        
-                       <form >
+                       <form  class="gform" method="POST"  action="https://script.google.com/macros/s/AKfycbztJKyvUd5tC40awk57mvKWQ3GtAD8Vuu7742On8adG6i8FPnn9OnayhE3EAvgRRYNX4g/exec">
                             <div class="large-6 column">
                                 <input type="text" name="name" title="Name" class="defaultText" /> 
                             </div>
                            
                            <div class="large-6 column">
-                                <input type="text" name="name" title="Email" class="defaultText" /> 
+                                <input type="text" name="email" title="Email" class="defaultText" /> 
                            </div>
                            
                            <div class="large-12 column">
-                               <textarea id="comments">문의사항</textarea>
+                               <textarea id="comments" name="message">문의사항</textarea>
                            </div>
                            
                            <div class="large-12 column">
                                <input type="submit" value="Send Message" class="cta"/>
                            </div> 
+                           <div style="display:none" class="thankyou_message">
+                            <!-- You can customize the thankyou message by editing the code below -->
+                            <h2><em>Thanks</em> for contacting us! We will get back to you soon!
+                            </h2>
+                           </div>
                        </form>
                    </div>
                </div>
